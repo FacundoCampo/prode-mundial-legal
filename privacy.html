@@ -1,242 +1,450 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Prode Mundial 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
-            color: #334155;
-            background-color: #f6f7f8;
-        }
-        .hero {
-            background: #0d1c2b;
-            padding: 48px 24px 40px;
-            text-align: center;
-        }
-        .hero-icon {
-            display: inline-flex;
-            width: 56px; height: 56px;
-            background: rgba(212,175,55,0.15);
-            border-radius: 16px;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            font-size: 28px;
-        }
-        .hero h1 {
-            color: #ffffff;
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
-        }
-        .hero .update-date {
-            color: #94a3b8;
-            font-size: 13px;
-            font-weight: 400;
-        }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 32px 24px 64px;
-        }
-        .intro {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 32px;
-            box-shadow: 0 4px 16px rgba(13,28,43,0.04);
-        }
-        .intro p { color: #475569; font-size: 15px; }
-        .intro strong { color: #0d1c2b; }
-        h2 {
-            color: #0d1c2b;
-            font-size: 18px;
-            font-weight: 700;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid rgba(212,175,55,0.3);
-            display: inline-block;
-        }
-        h3 {
-            color: #1e293b;
-            font-size: 15px;
-            font-weight: 600;
-            margin-top: 16px;
-            margin-bottom: 8px;
-        }
-        p { margin-bottom: 12px; font-size: 15px; }
-        ul {
-            padding-left: 20px;
-            margin-bottom: 16px;
-        }
-        li {
-            margin-bottom: 8px;
-            font-size: 15px;
-            color: #475569;
-        }
-        li::marker { color: #d4af37; }
-        a { color: #d4af37; text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; }
-        .service-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 16px 20px;
-            margin-bottom: 8px;
-            box-shadow: 0 2px 8px rgba(13,28,43,0.03);
-        }
-        .service-card strong { color: #0d1c2b; font-size: 14px; }
-        .service-card a { font-size: 13px; }
-        .footer-bar {
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            opacity: 0.5;
-        }
-        .footer {
-            text-align: center;
-            padding: 24px;
-            color: #94a3b8;
-            font-size: 13px;
-        }
-        .footer a { color: #d4af37; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad · Prode Fútbol 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1c2b;
+    --gold: #d4af37;
+    --gold-soft: rgba(212,175,55,0.14);
+    --bg: #f6f7f8;
+    --card: #ffffff;
+    --ink: #0d1c2b;
+    --text: #475569;
+    --muted: #94a3b8;
+    --line: rgba(13,28,43,0.08);
+    --shadow: 0 4px 20px rgba(13,28,43,0.06);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 64px 24px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -80px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: var(--gold-soft);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    position: relative;
+  }
+  .hero h1 {
+    font-size: clamp(30px, 6vw, 42px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    position: relative;
+  }
+  .hero h1 .accent { color: var(--gold); }
+  .hero .sub {
+    color: #cbd5e1;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 14px;
+    position: relative;
+  }
+  .hero .date {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 13px;
+    position: relative;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .wrap { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  .toc {
+    position: sticky;
+    top: 28px;
+    margin-top: -28px;
+    padding-top: 40px;
+  }
+  .toc-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+    padding-left: 14px;
+  }
+  .toc a {
+    display: block;
+    font-size: 13.5px;
+    color: var(--text);
+    text-decoration: none;
+    padding: 7px 14px;
+    border-left: 2px solid transparent;
+    transition: all .15s ease;
+    border-radius: 0 6px 6px 0;
+  }
+  .toc a:hover {
+    color: var(--ink);
+    background: rgba(13,28,43,0.03);
+    border-left-color: var(--gold);
+  }
+  @media (max-width: 860px) { .toc { display: none; } }
+
+  .content { padding: 40px 0 24px; min-width: 0; }
+
+  .intro {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+    border: 1px solid var(--line);
+  }
+  .intro p { font-size: 15.5px; color: var(--text); }
+  .intro strong { color: var(--ink); font-weight: 600; }
+
+  .section {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    margin-bottom: 16px;
+    scroll-margin-top: 20px;
+  }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .section-num {
+    flex-shrink: 0;
+    width: 38px; height: 38px;
+    border-radius: 11px;
+    background: var(--navy);
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.5px;
+  }
+  .section h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+  }
+  .section h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 18px 0 8px;
+  }
+  .section p { font-size: 15px; margin-bottom: 12px; }
+  .section p:last-child { margin-bottom: 0; }
+  .section strong { color: var(--ink); font-weight: 600; }
+  .section ul { padding-left: 4px; margin: 4px 0; list-style: none; }
+  .section li {
+    font-size: 15px;
+    color: var(--text);
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 9px;
+  }
+  .section li::before {
+    content: "";
+    position: absolute;
+    left: 6px; top: 11px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .section li:last-child { margin-bottom: 0; }
+  .section a { color: #b8860b; font-weight: 500; text-decoration: none; }
+  .section a:hover { text-decoration: underline; }
+
+  /* Tarjetas de servicios de terceros */
+  .services { display: grid; gap: 10px; margin-top: 6px; }
+  .svc {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--bg);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .svc-dot {
+    width: 36px; height: 36px;
+    border-radius: 9px;
+    background: var(--gold-soft);
+    color: #b8860b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+  .svc-body { flex: 1; min-width: 0; }
+  .svc-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .svc-role { font-size: 12.5px; color: var(--muted); }
+  .svc a { font-size: 12.5px; }
+
+  .callout {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: var(--gold-soft);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 14px 0 4px;
+  }
+  .callout .ic { color: #b8860b; font-size: 18px; flex-shrink: 0; line-height: 1.4; }
+  .callout p { font-size: 13.5px; color: #7a5c08; margin: 0; font-weight: 500; }
+
+  .footer {
+    text-align: center;
+    padding: 40px 24px 48px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .footer-line {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 24px;
+    border-radius: 2px;
+  }
+  .footer a { color: #b8860b; text-decoration: none; font-weight: 500; }
+  .footer a:hover { text-decoration: underline; }
+  .footer .links { margin-bottom: 10px; }
+  .footer .links a { margin: 0 8px; }
+  .footer .attr { font-size: 12px; color: var(--muted); margin-top: 6px; }
+</style>
 </head>
 <body>
-    <div class="hero">
-        <div class="hero-icon">🔒</div>
-        <h1>Política de Privacidad</h1>
-        <p class="update-date">Última actualización: 19 de marzo de 2026</p>
+
+<header class="hero">
+  <div class="hero-badge">🔒 Prode Fútbol 2026</div>
+  <h1>Política de <span class="accent">Privacidad</span></h1>
+  <p class="sub">Cómo recopilamos, usamos y protegemos tus datos</p>
+  <span class="date">Última actualización: 26 de junio de 2026</span>
+</header>
+
+<div class="wrap">
+
+  <nav class="toc">
+    <div class="toc-title">Contenido</div>
+    <a href="#s1">1 · Desarrollador</a>
+    <a href="#s2">2 · Datos que recopilamos</a>
+    <a href="#s3">3 · Cómo los usamos</a>
+    <a href="#s4">4 · Publicidad</a>
+    <a href="#s5">5 · Servicios de terceros</a>
+    <a href="#s6">6 · Compras dentro de la app</a>
+    <a href="#s7">7 · Eliminación de datos</a>
+    <a href="#s8">8 · Privacidad de menores</a>
+    <a href="#s9">9 · Tus derechos</a>
+    <a href="#s10">10 · Seguridad</a>
+    <a href="#s11">11 · Cambios</a>
+    <a href="#s12">12 · Contacto</a>
+  </nav>
+
+  <main class="content">
+
+    <div class="intro">
+      <p>Esta Política de Privacidad describe cómo la aplicación móvil <strong>Prode Fútbol 2026</strong>, desarrollada por <strong>Facundo Campo</strong>, recopila, utiliza y protege la información de los usuarios, de acuerdo con las políticas de Google Play, la App Store, el GDPR y la CCPA.</p>
     </div>
 
-    <div class="container">
-        <div class="intro">
-            <p>Esta Política de Privacidad describe cómo la aplicación móvil <strong>Prode Mundial 2026</strong>, desarrollada por <strong>Facundo Campo</strong>, recopila, utiliza y protege la información de los usuarios, de acuerdo con las políticas de Google Play, App Store, GDPR y CCPA.</p>
-        </div>
+    <section class="section" id="s1">
+      <div class="section-head"><div class="section-num">1</div><h2>Información del Desarrollador</h2></div>
+      <ul>
+        <li><strong>App:</strong> Prode Fútbol 2026</li>
+        <li><strong>Desarrollador:</strong> Facundo Campo</li>
+        <li><strong>Email de contacto:</strong> <a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a></li>
+      </ul>
+    </section>
 
-        <h2>1. Información del desarrollador</h2>
-        <ul>
-            <li><strong>App:</strong> Prode Mundial 2026</li>
-            <li><strong>Desarrollador:</strong> Facundo Campo</li>
-            <li><strong>Email de contacto:</strong> <a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a></li>
-        </ul>
+    <section class="section" id="s2">
+      <div class="section-head"><div class="section-num">2</div><h2>Datos que Recopilamos</h2></div>
 
-        <h2>2. Datos que recopilamos</h2>
+      <h3>Datos de cuenta (necesarios para usar la App)</h3>
+      <p>Al iniciar sesión con Google o Apple:</p>
+      <ul>
+        <li>Email</li>
+        <li>Nombre de perfil</li>
+        <li>Identificador de usuario</li>
+      </ul>
 
-        <h3>Datos de cuenta (requeridos para usar la App)</h3>
-        <p>Al iniciar sesión con Google o Apple:</p>
-        <ul>
-            <li>Email</li>
-            <li>Nombre de perfil</li>
-            <li>ID de usuario</li>
-        </ul>
+      <h3>Datos de uso</h3>
+      <ul>
+        <li>Pronósticos realizados (resultados predichos por partido).</li>
+        <li>Puntuación y ranking dentro de cada grupo.</li>
+        <li>Grupos a los que pertenece el usuario.</li>
+        <li>Preferencias de notificaciones.</li>
+      </ul>
 
-        <h3>Datos de uso</h3>
-        <ul>
-            <li>Pronósticos realizados (resultados predichos por partido)</li>
-            <li>Puntuación y ranking dentro de cada grupo</li>
-            <li>Grupos a los que pertenece el usuario</li>
-            <li>Preferencias de notificaciones</li>
-        </ul>
+      <h3>Datos recopilados automáticamente</h3>
+      <ul>
+        <li>Token de notificaciones push (para poder enviarte notificaciones).</li>
+        <li>Información de errores y fallos de la App (Sentry, para mejorar la estabilidad).</li>
+        <li>Identificador de publicidad del dispositivo y datos técnicos básicos (dirección IP, tipo de dispositivo), utilizados por el proveedor de anuncios. Ver la sección "Publicidad".</li>
+      </ul>
+    </section>
 
-        <h3>Datos recopilados automáticamente</h3>
-        <ul>
-            <li>Token de push notifications (para enviar notificaciones)</li>
-            <li>Información de errores y crashes (Sentry, para mejorar la estabilidad)</li>
-        </ul>
+    <section class="section" id="s3">
+      <div class="section-head"><div class="section-num">3</div><h2>Cómo Utilizamos los Datos</h2></div>
+      <ul>
+        <li>Permitir el funcionamiento de la App (inicio de sesión, pronósticos, rankings).</li>
+        <li>Guardar y sincronizar tus pronósticos y puntuaciones.</li>
+        <li>Enviar notificaciones (recordatorios de partidos, resultados, rankings).</li>
+        <li>Facilitar la participación en grupos de pronósticos.</li>
+        <li>Mostrar publicidad que mantiene la App gratuita.</li>
+        <li>Detectar errores y mejorar el rendimiento de la App.</li>
+      </ul>
+    </section>
 
-        <h2>3. Cómo utilizamos los datos</h2>
-        <ul>
-            <li>Permitir el funcionamiento de la App (login, pronósticos, rankings)</li>
-            <li>Guardar y sincronizar pronósticos y puntuaciones</li>
-            <li>Enviar notificaciones push (recordatorios de partidos, resultados, rankings)</li>
-            <li>Facilitar la participación en grupos de pronósticos</li>
-            <li>Detectar errores y mejorar el rendimiento de la App</li>
-        </ul>
+    <section class="section" id="s4">
+      <div class="section-head"><div class="section-num">4</div><h2>Publicidad</h2></div>
+      <p>La App es gratuita y se sostiene mostrando publicidad a través de <strong>Google AdMob</strong>. Es importante que sepas cómo funciona:</p>
+      <ul>
+        <li>La App está configurada para mostrar <strong>anuncios no personalizados</strong>. Esto significa que los anuncios no se basan en tu historial ni en un perfil de tus intereses.</li>
+        <li>Aun así, Google AdMob puede recopilar cierta información para mostrar los anuncios y prevenir fraude, como el identificador de publicidad del dispositivo, la dirección IP y datos técnicos del dispositivo.</li>
+        <li>No vendemos tus datos personales ni los compartimos con anunciantes.</li>
+      </ul>
+      <p>Podés conocer cómo Google maneja estos datos en sus <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">políticas de publicidad</a>, y gestionar tus preferencias desde la <a href="https://adssettings.google.com/" target="_blank" rel="noopener">configuración de anuncios de Google</a>.</p>
+      <div class="callout">
+        <span class="ic">ℹ</span>
+        <p>Podés limitar el seguimiento publicitario desde los ajustes de tu dispositivo (en iOS, "Permitir que las apps soliciten rastrear"; en Android, "Restablecer ID de publicidad" o "Inhabilitar anuncios personalizados").</p>
+      </div>
+    </section>
 
-        <h2>4. Servicios de terceros</h2>
+    <section class="section" id="s5">
+      <div class="section-head"><div class="section-num">5</div><h2>Servicios de Terceros</h2></div>
+      <p>La App se apoya en los siguientes servicios, cada uno con su propia política de privacidad:</p>
+      <div class="services">
+        <div class="svc"><div class="svc-dot">▤</div><div class="svc-body"><div class="svc-name">Supabase</div><div class="svc-role">Base de datos y autenticación</div></div><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Ver</a></div>
+        <div class="svc"><div class="svc-dot">⚽</div><div class="svc-body"><div class="svc-name">Football-Data.org</div><div class="svc-role">Datos de partidos y resultados</div></div><a href="https://www.football-data.org/about" target="_blank" rel="noopener">Ver</a></div>
+        <div class="svc"><div class="svc-dot">▶</div><div class="svc-body"><div class="svc-name">Google AdMob</div><div class="svc-role">Publicidad</div></div><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Ver</a></div>
+        <div class="svc"><div class="svc-dot">G</div><div class="svc-body"><div class="svc-name">Google Sign-In</div><div class="svc-role">Autenticación</div></div><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Ver</a></div>
+        <div class="svc"><div class="svc-dot"></div><div class="svc-body"><div class="svc-name">Apple Sign-In</div><div class="svc-role">Autenticación</div></div><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Ver</a></div>
+        <div class="svc"><div class="svc-dot">✉</div><div class="svc-body"><div class="svc-name">Expo Push Notifications</div><div class="svc-role">Envío de notificaciones</div></div><a href="https://expo.dev/privacy" target="_blank" rel="noopener">Ver</a></div>
+        <div class="svc"><div class="svc-dot">◈</div><div class="svc-body"><div class="svc-name">Sentry</div><div class="svc-role">Reporte de errores</div></div><a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Ver</a></div>
+      </div>
+    </section>
 
-        <div class="service-card">
-            <strong>Supabase</strong> — Base de datos y autenticación<br>
-            <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>
-        </div>
-        <div class="service-card">
-            <strong>Football-Data.org</strong> — Datos de partidos y resultados<br>
-            <a href="https://www.football-data.org/privacy" target="_blank">football-data.org/privacy</a>
-        </div>
-        <div class="service-card">
-            <strong>Google Sign-In</strong> — Autenticación<br>
-            <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
-        </div>
-        <div class="service-card">
-            <strong>Apple Sign-In</strong> — Autenticación<br>
-            <a href="https://www.apple.com/legal/privacy/" target="_blank">apple.com/legal/privacy</a>
-        </div>
-        <div class="service-card">
-            <strong>Expo Push Notifications</strong> — Envío de notificaciones<br>
-            <a href="https://expo.dev/privacy" target="_blank">expo.dev/privacy</a>
-        </div>
-        <div class="service-card">
-            <strong>Sentry</strong> — Reporte de errores<br>
-            <a href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy</a>
-        </div>
+    <section class="section" id="s6">
+      <div class="section-head"><div class="section-num">6</div><h2>Compras Dentro de la App</h2></div>
+      <p>Prode Fútbol 2026 <strong>no ofrece compras dentro de la app</strong> ni suscripciones. La App es completamente gratuita y se financia únicamente con la publicidad descrita más arriba.</p>
+    </section>
 
-        <h2>5. Publicidad y compras</h2>
-        <p>Prode Mundial 2026 <strong>no muestra publicidad</strong> y <strong>no tiene compras dentro de la app</strong>. La App es completamente gratuita.</p>
+    <section class="section" id="s7">
+      <div class="section-head"><div class="section-num">7</div><h2>Eliminación de Datos</h2></div>
+      <p>Podés eliminar tu cuenta y tus datos personales de dos maneras:</p>
+      <ul>
+        <li><strong>Desde la App:</strong> en la sección de perfil, usando la opción "Eliminar cuenta". El borrado es inmediato y permanente.</li>
+        <li><strong>Por email:</strong> escribiendo a <a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a>, o mediante nuestra <a href="delete.html">página de solicitud de eliminación</a>.</li>
+      </ul>
+      <p>Al eliminar tu cuenta, tus datos en la nube se eliminan de forma permanente. Los datos almacenados localmente se eliminan al desinstalar la App.</p>
+    </section>
 
-        <h2>6. Eliminación de datos</h2>
-        <p>Los usuarios pueden solicitar la eliminación de su cuenta y datos personales en cualquier momento escribiendo a:</p>
-        <p><strong><a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a></strong></p>
-        <p>También podés usar nuestra <a href="delete.html">página de solicitud de eliminación</a>.</p>
-        <p>Al eliminar la cuenta:</p>
-        <ul>
-            <li>Los datos en la nube se eliminan de forma permanente dentro de 30 días</li>
-            <li>Los datos locales pueden eliminarse desinstalando la app</li>
-        </ul>
+    <section class="section" id="s8">
+      <div class="section-head"><div class="section-num">8</div><h2>Privacidad de Menores</h2></div>
+      <p>Prode Fútbol 2026 <strong>no está dirigida a menores de 13 años</strong>. No recopilamos intencionalmente datos personales de menores. Si descubrimos que recopilamos datos de un menor sin el consentimiento parental verificable, eliminaremos esa información.</p>
+    </section>
 
-        <h2>7. Privacidad de menores</h2>
-        <p>Prode Mundial 2026 <strong>no está dirigida a menores de 13 años</strong>. No recopilamos intencionalmente datos personales de menores. Si descubrimos que hemos recopilado datos de un menor sin consentimiento parental verificable, eliminaremos esa información.</p>
+    <section class="section" id="s9">
+      <div class="section-head"><div class="section-num">9</div><h2>Tus Derechos (GDPR y CCPA)</h2></div>
+      <p>Tenés derecho a:</p>
+      <ul>
+        <li>Acceder a tus datos personales.</li>
+        <li>Corregir datos incorrectos.</li>
+        <li>Solicitar la eliminación de tus datos.</li>
+        <li>Oponerte al procesamiento de tus datos.</li>
+        <li>Solicitar la portabilidad de tus datos.</li>
+      </ul>
+      <p>Para ejercer estos derechos, contactanos en <a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a>.</p>
+    </section>
 
-        <h2>8. Derechos de los usuarios (GDPR y CCPA)</h2>
-        <p>Tenés derecho a:</p>
-        <ul>
-            <li>Acceder a tus datos personales</li>
-            <li>Corregir datos incorrectos</li>
-            <li>Solicitar la eliminación de tus datos</li>
-            <li>Oponerte al procesamiento de tus datos</li>
-            <li>Portabilidad de datos</li>
-        </ul>
-        <p>Para ejercer estos derechos, contactanos en: <strong><a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a></strong></p>
+    <section class="section" id="s10">
+      <div class="section-head"><div class="section-num">10</div><h2>Seguridad</h2></div>
+      <p>Aplicamos medidas técnicas y organizativas para proteger tus datos, incluyendo:</p>
+      <ul>
+        <li>Encriptación de datos en tránsito (HTTPS/TLS).</li>
+        <li>Almacenamiento seguro de credenciales.</li>
+        <li>Políticas de seguridad a nivel de base de datos (Row Level Security).</li>
+        <li>Pronósticos ocultos para los demás integrantes hasta que comienza cada partido.</li>
+      </ul>
+    </section>
 
-        <h2>9. Seguridad</h2>
-        <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos, incluyendo:</p>
-        <ul>
-            <li>Encriptación de datos en tránsito (HTTPS/TLS)</li>
-            <li>Almacenamiento seguro de credenciales</li>
-            <li>Políticas de seguridad a nivel de base de datos (Row Level Security)</li>
-            <li>Pronósticos invisibles para otros usuarios hasta el kickoff del partido</li>
-        </ul>
+    <section class="section" id="s11">
+      <div class="section-head"><div class="section-num">11</div><h2>Cambios en esta Política</h2></div>
+      <p>Esta Política puede actualizarse ocasionalmente. Los cambios significativos se notificarán dentro de la App y se publicarán en esta página con una nueva fecha de actualización.</p>
+    </section>
 
-        <h2>10. Cambios en esta política</h2>
-        <p>Esta Política puede actualizarse ocasionalmente. Los cambios significativos se notificarán dentro de la App y se publicarán en esta página con una nueva fecha de actualización.</p>
+    <section class="section" id="s12">
+      <div class="section-head"><div class="section-num">12</div><h2>Contacto</h2></div>
+      <p>Para preguntas o inquietudes sobre esta Política de Privacidad:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a></li>
+        <li><strong>Desarrollador:</strong> Facundo Campo</li>
+      </ul>
+    </section>
 
-        <h2>11. Contacto</h2>
-        <p>Para preguntas o inquietudes sobre esta Política de Privacidad:</p>
-        <ul>
-            <li><strong>Email:</strong> <a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a></li>
-            <li><strong>Desarrollador:</strong> Facundo Campo</li>
-        </ul>
-    </div>
+  </main>
+</div>
 
-    <div class="footer-bar"></div>
-    <div class="footer">
-        <p><a href="terms.html">Términos de Uso</a> · <a href="delete.html">Eliminación de Datos</a></p>
-        <p style="margin-top: 8px;">Prode Mundial 2026 — Facundo Campo</p>
-    </div>
+<footer class="footer">
+  <div class="footer-line"></div>
+  <div class="links">
+    <a href="terms.html">Términos de Uso</a> ·
+    <a href="delete.html">Eliminación de Datos</a>
+  </div>
+  <p>Prode Fútbol 2026 — Facundo Campo</p>
+  <p class="attr">Football data provided by the Football-Data.org API</p>
+</footer>
+
 </body>
 </html>
