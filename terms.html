@@ -1,209 +1,514 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos de Uso - Prode Mundial 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
-            color: #334155;
-            background-color: #f6f7f8;
-        }
-        .hero {
-            background: #0d1c2b;
-            padding: 48px 24px 40px;
-            text-align: center;
-        }
-        .hero-icon {
-            display: inline-flex;
-            width: 56px; height: 56px;
-            background: rgba(212,175,55,0.15);
-            border-radius: 16px;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            font-size: 28px;
-        }
-        .hero h1 {
-            color: #ffffff;
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
-        }
-        .hero .update-date {
-            color: #94a3b8;
-            font-size: 13px;
-            font-weight: 400;
-        }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 32px 24px 64px;
-        }
-        .intro {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 32px;
-            box-shadow: 0 4px 16px rgba(13,28,43,0.04);
-        }
-        .intro p { color: #475569; font-size: 15px; }
-        .intro strong { color: #0d1c2b; }
-        h2 {
-            color: #0d1c2b;
-            font-size: 18px;
-            font-weight: 700;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid rgba(212,175,55,0.3);
-            display: inline-block;
-        }
-        p { margin-bottom: 12px; font-size: 15px; }
-        ul {
-            padding-left: 20px;
-            margin-bottom: 16px;
-        }
-        li {
-            margin-bottom: 8px;
-            font-size: 15px;
-            color: #475569;
-        }
-        li::marker { color: #d4af37; }
-        a { color: #d4af37; text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; }
-        .footer-bar {
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            opacity: 0.5;
-        }
-        .footer {
-            text-align: center;
-            padding: 24px;
-            color: #94a3b8;
-            font-size: 13px;
-        }
-        .footer a { color: #d4af37; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Términos de Uso · Prode Fútbol 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1c2b;
+    --navy-soft: #1a2e42;
+    --gold: #d4af37;
+    --gold-soft: rgba(212,175,55,0.14);
+    --bg: #f6f7f8;
+    --card: #ffffff;
+    --ink: #0d1c2b;
+    --text: #475569;
+    --muted: #94a3b8;
+    --line: rgba(13,28,43,0.08);
+    --shadow: 0 4px 20px rgba(13,28,43,0.06);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 64px 24px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -80px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: var(--gold-soft);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    position: relative;
+  }
+  .hero h1 {
+    font-size: clamp(30px, 6vw, 42px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    position: relative;
+  }
+  .hero h1 .accent { color: var(--gold); }
+  .hero .sub {
+    color: #cbd5e1;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 14px;
+    position: relative;
+  }
+  .hero .date {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 13px;
+    position: relative;
+  }
+
+  /* ---- Layout ---- */
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .wrap { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  /* ---- Índice lateral ---- */
+  .toc {
+    position: sticky;
+    top: 28px;
+    margin-top: -28px;
+    padding-top: 40px;
+  }
+  .toc-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+    padding-left: 14px;
+  }
+  .toc a {
+    display: block;
+    font-size: 13.5px;
+    color: var(--text);
+    text-decoration: none;
+    padding: 7px 14px;
+    border-left: 2px solid transparent;
+    transition: all .15s ease;
+    border-radius: 0 6px 6px 0;
+  }
+  .toc a:hover {
+    color: var(--ink);
+    background: rgba(13,28,43,0.03);
+    border-left-color: var(--gold);
+  }
+  @media (max-width: 860px) {
+    .toc { display: none; }
+  }
+
+  /* ---- Contenido ---- */
+  .content { padding: 40px 0 24px; min-width: 0; }
+
+  .intro {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+    border: 1px solid var(--line);
+  }
+  .intro p { font-size: 15.5px; color: var(--text); }
+  .intro strong { color: var(--ink); font-weight: 600; }
+
+  .section {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    margin-bottom: 16px;
+    scroll-margin-top: 20px;
+  }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .section-num {
+    flex-shrink: 0;
+    width: 38px; height: 38px;
+    border-radius: 11px;
+    background: var(--navy);
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.5px;
+  }
+  .section h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+  }
+  .section p { font-size: 15px; margin-bottom: 12px; }
+  .section p:last-child { margin-bottom: 0; }
+  .section strong { color: var(--ink); font-weight: 600; }
+  .section ul { padding-left: 4px; margin: 4px 0 4px; list-style: none; }
+  .section li {
+    font-size: 15px;
+    color: var(--text);
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 9px;
+  }
+  .section li::before {
+    content: "";
+    position: absolute;
+    left: 6px; top: 11px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .section li:last-child { margin-bottom: 0; }
+  .section a { color: #b8860b; font-weight: 500; text-decoration: none; }
+  .section a:hover { text-decoration: underline; }
+
+  /* Badges de puntos (eco de la app) */
+  .points {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 14px 0 4px;
+  }
+  .point {
+    flex: 1;
+    min-width: 130px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg);
+    border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .point .pill {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .point .pill.p3 { background: rgba(34,197,94,0.12); color: #16a34a; }
+  .point .pill.p1 { background: rgba(234,179,8,0.14); color: #ca8a04; }
+  .point .pill.p0 { background: rgba(13,28,43,0.06); color: var(--muted); }
+  .point .pt-label { font-size: 13px; font-weight: 600; color: var(--ink); }
+  .point .pt-desc { font-size: 12px; color: var(--muted); }
+
+  /* Caja destacada */
+  .callout {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: var(--gold-soft);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 14px 0 4px;
+  }
+  .callout .ic { color: #b8860b; font-size: 18px; flex-shrink: 0; line-height: 1.4; }
+  .callout p { font-size: 13.5px; color: #7a5c08; margin: 0; font-weight: 500; }
+
+  .callout.navy { background: var(--navy); }
+  .callout.navy p { color: #e2e8f0; }
+  .callout.navy .ic { color: var(--gold); }
+
+  /* ---- Footer ---- */
+  .footer {
+    text-align: center;
+    padding: 40px 24px 48px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .footer-line {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 24px;
+    border-radius: 2px;
+  }
+  .footer a { color: #b8860b; text-decoration: none; font-weight: 500; }
+  .footer a:hover { text-decoration: underline; }
+  .footer .links { margin-bottom: 10px; }
+  .footer .links a { margin: 0 8px; }
+  .footer .attr { font-size: 12px; color: var(--muted); margin-top: 6px; }
+</style>
 </head>
 <body>
-    <div class="hero">
-        <div class="hero-icon">⚽</div>
-        <h1>Términos de Uso</h1>
-        <p class="update-date">Última actualización: 19 de marzo de 2026</p>
+
+<header class="hero">
+  <div class="hero-badge">⚽ Prode Fútbol 2026</div>
+  <h1>Términos de <span class="accent">Uso</span></h1>
+  <p class="sub">Las reglas que rigen el uso de la aplicación</p>
+  <span class="date">Última actualización: 26 de junio de 2026</span>
+</header>
+
+<div class="wrap">
+
+  <!-- Índice -->
+  <nav class="toc">
+    <div class="toc-title">Contenido</div>
+    <a href="#s1">1 · Aceptación</a>
+    <a href="#s2">2 · El servicio</a>
+    <a href="#s3">3 · Cuentas</a>
+    <a href="#s4">4 · Grupos y pronósticos</a>
+    <a href="#s5">5 · Cómo se juega</a>
+    <a href="#s6">6 · Pozo y premios</a>
+    <a href="#s7">7 · Conducta</a>
+    <a href="#s8">8 · Publicidad</a>
+    <a href="#s9">9 · Datos y no afiliación</a>
+    <a href="#s10">10 · Propiedad intelectual</a>
+    <a href="#s11">11 · Disponibilidad</a>
+    <a href="#s12">12 · Responsabilidad</a>
+    <a href="#s13">13 · Eliminar cuenta</a>
+    <a href="#s14">14 · Cambios</a>
+    <a href="#s15">15 · Terminación</a>
+    <a href="#s16">16 · Ley aplicable</a>
+    <a href="#s17">17 · Contacto</a>
+  </nav>
+
+  <!-- Cuerpo -->
+  <main class="content">
+
+    <div class="intro">
+      <p>Estos Términos de Uso ("Términos") rigen el uso de la aplicación móvil <strong>Prode Fútbol 2026</strong> ("la App"), desarrollada por <strong>Facundo Campo</strong> ("el Desarrollador", "nosotros"). Al descargar, instalar o usar la App, aceptás estos Términos en su totalidad.</p>
     </div>
 
-    <div class="container">
-        <div class="intro">
-            <p>Estos Términos de Uso ("Términos") rigen el uso de la aplicación móvil <strong>Prode Mundial 2026</strong> ("la App"), desarrollada por <strong>Facundo Campo</strong> ("el Desarrollador", "nosotros"). Al descargar, instalar o usar la App, aceptás estos Términos.</p>
-        </div>
+    <section class="section" id="s1">
+      <div class="section-head"><div class="section-num">1</div><h2>Aceptación de los Términos</h2></div>
+      <p>Al acceder o utilizar la App, confirmás que:</p>
+      <ul>
+        <li>Leíste y comprendiste estos Términos.</li>
+        <li>Aceptás cumplirlos.</li>
+        <li>Tenés al menos 13 años de edad, o contás con el consentimiento de un padre, madre o tutor.</li>
+      </ul>
+      <p>Si no estás de acuerdo con alguna parte de estos Términos, no debés usar la App.</p>
+    </section>
 
-        <h2>1. Aceptación de los Términos</h2>
-        <p>Al acceder o utilizar Prode Mundial 2026, confirmás que:</p>
-        <ul>
-            <li>Has leído y comprendido estos Términos</li>
-            <li>Aceptás cumplir con estos Términos</li>
-            <li>Tenés al menos 13 años de edad o contás con el consentimiento de un padre o tutor</li>
-        </ul>
+    <section class="section" id="s2">
+      <div class="section-head"><div class="section-num">2</div><h2>Descripción del Servicio</h2></div>
+      <p>Prode Fútbol 2026 es una aplicación de pronósticos deportivos entre amigos, de carácter recreativo y social. Ofrece:</p>
+      <ul>
+        <li>Pronósticos de resultados de partidos de diferentes torneos de fútbol.</li>
+        <li>Creación y gestión de grupos privados de competencia.</li>
+        <li>Un sistema de puntuación automático.</li>
+        <li>Rankings dentro de cada grupo.</li>
+        <li>Notificaciones de recordatorio y resultados.</li>
+        <li>Una herramienta informativa para llevar la cuenta de un pozo y sus premios entre los integrantes del grupo.</li>
+      </ul>
+      <p>La App es un juego social entre amigos y <strong>no es una plataforma de apuestas</strong>.</p>
+    </section>
 
-        <h2>2. Descripción del Servicio</h2>
-        <p>Prode Mundial 2026 es una aplicación de pronósticos deportivos entre amigos que ofrece:</p>
-        <ul>
-            <li>Pronósticos de resultados de partidos del Mundial 2026 y la UEFA Champions League</li>
-            <li>Creación y gestión de grupos privados de competencia</li>
-            <li>Sistema de puntuación automático (3 pts resultado exacto, 1 pt signo correcto, 0 pts fallo)</li>
-            <li>Rankings en tiempo real dentro de cada grupo</li>
-            <li>Notificaciones push de recordatorio y resultados</li>
-            <li>Gestión informativa de pozo y distribución de premios</li>
-        </ul>
+    <section class="section" id="s3">
+      <div class="section-head"><div class="section-num">3</div><h2>Cuentas de Usuario</h2></div>
+      <p>Para usar la App necesitás crear una cuenta mediante Google Sign-In o Apple Sign-In. Al crear una cuenta:</p>
+      <ul>
+        <li>Sos responsable de mantener la seguridad de tu cuenta.</li>
+        <li>No debés compartir tus credenciales de acceso.</li>
+        <li>Debés notificarnos de inmediato si sospechás un uso no autorizado.</li>
+        <li>Podemos suspender o cerrar cuentas que violen estos Términos.</li>
+      </ul>
+    </section>
 
-        <h2>3. Cuentas de Usuario</h2>
-        <p>Para usar la App necesitás crear una cuenta mediante Google Sign-In o Apple Sign-In. Al crear una cuenta:</p>
-        <ul>
-            <li>Sos responsable de mantener la seguridad de tu cuenta</li>
-            <li>No debés compartir tus credenciales de acceso</li>
-            <li>Debés notificarnos inmediatamente si sospechás uso no autorizado</li>
-            <li>Podemos suspender o terminar cuentas que violen estos Términos</li>
-        </ul>
+    <section class="section" id="s4">
+      <div class="section-head"><div class="section-num">4</div><h2>Grupos y Pronósticos</h2></div>
+      <p>Los grupos de pronósticos en la App:</p>
+      <ul>
+        <li>Son creados y administrados por un usuario ("administrador").</li>
+        <li>Tienen un código de invitación único de 6 caracteres.</li>
+        <li>Permiten un máximo de 200 miembros por grupo.</li>
+        <li>Bloquean cada pronóstico en el momento en que comienza el partido correspondiente.</li>
+        <li>Mantienen ocultos los pronósticos de los demás integrantes hasta que el partido comienza.</li>
+        <li>Permiten participar en varios grupos a la vez.</li>
+      </ul>
+    </section>
 
-        <h2>4. Grupos y Pronósticos</h2>
-        <p>Los grupos de pronósticos en la App:</p>
-        <ul>
-            <li>Son creados y administrados por un usuario ("Admin")</li>
-            <li>Tienen un código de invitación único de 6 caracteres</li>
-            <li>Permiten un máximo de 30 miembros por grupo</li>
-            <li>Los pronósticos se bloquean individualmente al momento del kickoff de cada partido</li>
-            <li>Los pronósticos de otros miembros son invisibles hasta que el partido comienza</li>
-            <li>Un usuario puede participar en múltiples grupos simultáneamente</li>
-        </ul>
+    <section class="section" id="s5">
+      <div class="section-head"><div class="section-num">5</div><h2>Cómo se Juega y se Puntúa</h2></div>
+      <p>Antes de cada partido predecís el resultado exacto. Los puntos se otorgan así:</p>
+      <div class="points">
+        <div class="point"><div class="pill p3">3</div><div><div class="pt-label">Resultado exacto</div><div class="pt-desc">Acertaste el marcador</div></div></div>
+        <div class="point"><div class="pill p1">1</div><div><div class="pt-label">Ganador o empate</div><div class="pt-desc">Signo correcto</div></div></div>
+        <div class="point"><div class="pill p0">0</div><div><div class="pt-label">Sin acierto</div><div class="pt-desc">No coincide</div></div></div>
+      </div>
+      <div class="callout">
+        <span class="ic">⚑</span>
+        <p>En partidos de eliminación directa, cuenta el resultado al final del tiempo reglamentario (incluida la prórroga). La definición por penales no se tiene en cuenta: un 1-1 definido por penales cuenta como empate 1-1.</p>
+      </div>
+      <p style="margin-top:14px;">Ante igualdad de puntos en la tabla, queda mejor ubicado quien tenga más resultados exactos. Los resultados y puntos se actualizan automáticamente, con una demora que puede llegar a unos 30 minutos tras la finalización del partido.</p>
+    </section>
 
-        <h2>5. Pozo y Premios</h2>
-        <p>La App permite al administrador del grupo definir un monto de entrada y distribución de premios de forma informativa. Es importante aclarar que:</p>
-        <ul>
-            <li>La App <strong>no maneja dinero real</strong> ni procesa pagos</li>
-            <li>El pozo y los premios son meramente informativos para facilitar la organización entre amigos</li>
-            <li>La gestión y transferencia de dinero es responsabilidad exclusiva de los participantes del grupo</li>
-            <li>El Desarrollador no es responsable de disputas relacionadas con pagos entre usuarios</li>
-        </ul>
+    <section class="section" id="s6">
+      <div class="section-head"><div class="section-num">6</div><h2>Pozo y Premios</h2></div>
+      <p>La App permite al administrador del grupo definir un monto de entrada y una distribución de premios <strong>de forma puramente informativa</strong>. Es importante aclarar que:</p>
+      <ul>
+        <li>La App <strong>no maneja dinero real</strong> ni procesa pagos.</li>
+        <li>El pozo y los premios son meramente informativos, para facilitar la organización entre amigos.</li>
+        <li>La gestión y transferencia de cualquier dinero es responsabilidad exclusiva de los participantes del grupo.</li>
+        <li>El Desarrollador no es responsable de disputas relacionadas con pagos entre usuarios.</li>
+      </ul>
+      <div class="callout navy">
+        <span class="ic">ℹ</span>
+        <p>Prode Fútbol 2026 es un juego recreativo entre amigos. No constituye, organiza ni facilita apuestas ni juegos de azar por dinero.</p>
+      </div>
+    </section>
 
-        <h2>6. Conducta del Usuario</h2>
-        <p>Al usar la App, aceptás NO:</p>
-        <ul>
-            <li>Usar trampas, hacks o software de terceros para obtener ventajas</li>
-            <li>Manipular o intentar manipular el sistema de puntuación</li>
-            <li>Crear múltiples cuentas para evadir restricciones</li>
-            <li>Intentar acceder a sistemas o datos no autorizados</li>
-            <li>Usar la App para cualquier propósito ilegal, incluyendo apuestas ilegales</li>
-        </ul>
+    <section class="section" id="s7">
+      <div class="section-head"><div class="section-num">7</div><h2>Conducta del Usuario</h2></div>
+      <p>Al usar la App, aceptás NO:</p>
+      <ul>
+        <li>Usar trampas, hacks o software de terceros para obtener ventajas.</li>
+        <li>Manipular o intentar manipular el sistema de puntuación.</li>
+        <li>Crear múltiples cuentas para evadir restricciones.</li>
+        <li>Intentar acceder a sistemas o datos no autorizados.</li>
+        <li>Usar la App para cualquier propósito ilegal.</li>
+      </ul>
+    </section>
 
-        <h2>7. Propiedad Intelectual</h2>
-        <p>Todos los derechos de propiedad intelectual de la App, incluyendo código fuente, diseño visual, gráficos e iconos, son propiedad del Desarrollador. Los datos de partidos son proporcionados por Football-Data.org. Los escudos y nombres de equipos son propiedad de sus respectivos dueños.</p>
+    <section class="section" id="s8">
+      <div class="section-head"><div class="section-num">8</div><h2>Publicidad</h2></div>
+      <p>La App es gratuita y se sostiene mostrando publicidad de terceros a través de <strong>Google AdMob</strong>. Al usar la App:</p>
+      <ul>
+        <li>Es posible que se muestren anuncios dentro de distintas pantallas.</li>
+        <li>Google puede recopilar y procesar datos conforme a sus propias políticas para mostrar anuncios.</li>
+        <li>Podés conocer más sobre el manejo de datos de Google en <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">las políticas de publicidad de Google</a>.</li>
+      </ul>
+      <p>El tratamiento de tus datos se detalla en nuestra <a href="privacy.html">Política de Privacidad</a>.</p>
+    </section>
 
-        <h2>8. Disponibilidad del Servicio</h2>
-        <p>Nos esforzamos por mantener la App disponible, pero:</p>
-        <ul>
-            <li>No garantizamos disponibilidad ininterrumpida</li>
-            <li>Podemos realizar mantenimiento sin previo aviso</li>
-            <li>Podemos modificar o discontinuar funciones en cualquier momento</li>
-            <li>No somos responsables por pérdidas debido a interrupciones del servicio</li>
-            <li>La disponibilidad de datos de partidos depende de proveedores externos (Football-Data.org)</li>
-        </ul>
+    <section class="section" id="s9">
+      <div class="section-head"><div class="section-num">9</div><h2>Origen de los Datos y No Afiliación</h2></div>
+      <p>La App muestra datos deportivos (partidos, resultados, equipos, etc.) provenientes de un proveedor externo:</p>
+      <ul>
+        <li>Los datos son proporcionados por la API de <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a>. La App únicamente los muestra; no los genera ni los valida.</li>
+        <li>La App es un proyecto <strong>independiente</strong> y no está afiliada, asociada, autorizada ni respaldada por FIFA, UEFA, CONMEBOL, AFA ni ninguna otra federación, confederación, liga, torneo o club.</li>
+        <li>Los escudos, banderas y nombres que puedan mostrarse pertenecen a sus respectivos dueños y se utilizan solo con fines informativos y de identificación.</li>
+      </ul>
+      <div class="callout">
+        <span class="ic">⚽</span>
+        <p>Football data provided by the Football-Data.org API.</p>
+      </div>
+    </section>
 
-        <h2>9. Limitación de Responsabilidad</h2>
-        <p>La App se proporciona "tal cual" sin garantías de ningún tipo. En la máxima medida permitida por la ley:</p>
-        <ul>
-            <li>No garantizamos que la App esté libre de errores</li>
-            <li>No somos responsables por daños indirectos, incidentales o consecuentes</li>
-            <li>No somos responsables por la precisión de los datos de partidos o resultados</li>
-            <li>No somos responsables por disputas monetarias entre usuarios de un grupo</li>
-        </ul>
+    <section class="section" id="s10">
+      <div class="section-head"><div class="section-num">10</div><h2>Propiedad Intelectual</h2></div>
+      <p>Todos los derechos de propiedad intelectual sobre la App —incluyendo su código fuente, diseño visual, gráficos e íconos propios— pertenecen al Desarrollador. Los datos deportivos pertenecen a su proveedor (Football-Data.org) y los escudos, banderas y marcas a sus respectivos dueños, según se indica en la sección anterior.</p>
+    </section>
 
-        <h2>10. Modificaciones a los Términos</h2>
-        <p>Podemos actualizar estos Términos ocasionalmente. Te notificaremos de cambios significativos mediante aviso dentro de la App y actualización de la fecha de "Última actualización". El uso continuado de la App después de los cambios constituye aceptación de los nuevos Términos.</p>
+    <section class="section" id="s11">
+      <div class="section-head"><div class="section-num">11</div><h2>Disponibilidad del Servicio</h2></div>
+      <p>Nos esforzamos por mantener la App disponible, pero:</p>
+      <ul>
+        <li>No garantizamos una disponibilidad ininterrumpida.</li>
+        <li>Podemos realizar mantenimiento sin previo aviso.</li>
+        <li>Podemos modificar o discontinuar funciones en cualquier momento.</li>
+        <li>No somos responsables por pérdidas debidas a interrupciones del servicio.</li>
+        <li>La disponibilidad de los datos de partidos depende de proveedores externos.</li>
+      </ul>
+    </section>
 
-        <h2>11. Terminación</h2>
-        <p>Podés dejar de usar la App en cualquier momento. Nosotros podemos suspender o terminar tu acceso por violación de estos Términos, eliminar cuentas inactivas después de 12 meses, o discontinuar la App con 30 días de aviso previo.</p>
+    <section class="section" id="s12">
+      <div class="section-head"><div class="section-num">12</div><h2>Limitación de Responsabilidad</h2></div>
+      <p>La App se proporciona "tal cual", sin garantías de ningún tipo. En la máxima medida permitida por la ley:</p>
+      <ul>
+        <li>No garantizamos que la App esté libre de errores.</li>
+        <li>No somos responsables por daños indirectos, incidentales o consecuentes.</li>
+        <li>No somos responsables por la precisión de los datos de partidos o resultados.</li>
+        <li>No somos responsables por disputas monetarias entre usuarios de un grupo.</li>
+      </ul>
+    </section>
 
-        <h2>12. Ley Aplicable</h2>
-        <p>Estos Términos se rigen por las leyes de la República Argentina. Cualquier disputa se resolverá en los tribunales competentes de la Ciudad Autónoma de Buenos Aires.</p>
+    <section class="section" id="s13">
+      <div class="section-head"><div class="section-num">13</div><h2>Eliminación de la Cuenta</h2></div>
+      <p>Podés eliminar tu cuenta en cualquier momento <strong>desde la propia App</strong>, en la sección de perfil. Al eliminar tu cuenta:</p>
+      <ul>
+        <li>Se eliminan tu perfil, tus pronósticos y tu progreso.</li>
+        <li>Se libera tu participación en los grupos: si sos administrador de un grupo con otros miembros, la administración se transfiere automáticamente al miembro más antiguo; los grupos donde seas el único miembro se eliminan.</li>
+        <li>La eliminación es permanente y no se puede deshacer.</li>
+      </ul>
+    </section>
 
-        <h2>13. Contacto</h2>
-        <p>Para preguntas sobre estos Términos:</p>
-        <ul>
-            <li><strong>Email:</strong> <a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a></li>
-            <li><strong>Desarrollador:</strong> Facundo Campo</li>
-        </ul>
-    </div>
+    <section class="section" id="s14">
+      <div class="section-head"><div class="section-num">14</div><h2>Modificaciones a los Términos</h2></div>
+      <p>Podemos actualizar estos Términos ocasionalmente. Te notificaremos de cambios significativos mediante un aviso dentro de la App y la actualización de la fecha de "Última actualización". El uso continuado de la App después de los cambios constituye la aceptación de los nuevos Términos.</p>
+    </section>
 
-    <div class="footer-bar"></div>
-    <div class="footer">
-        <p><a href="privacy.html">Política de Privacidad</a> · <a href="delete.html">Eliminación de Datos</a></p>
-        <p style="margin-top: 8px;">Prode Mundial 2026 — Facundo Campo</p>
-    </div>
+    <section class="section" id="s15">
+      <div class="section-head"><div class="section-num">15</div><h2>Terminación</h2></div>
+      <p>Podés dejar de usar la App en cualquier momento. Nosotros podemos suspender o cerrar tu acceso por violación de estos Términos, eliminar cuentas inactivas tras un período prolongado, o discontinuar la App con un aviso previo razonable.</p>
+    </section>
+
+    <section class="section" id="s16">
+      <div class="section-head"><div class="section-num">16</div><h2>Ley Aplicable</h2></div>
+      <p>Estos Términos se rigen por las leyes de la República Argentina. Cualquier disputa se resolverá en los tribunales competentes de la Ciudad Autónoma de Buenos Aires.</p>
+    </section>
+
+    <section class="section" id="s17">
+      <div class="section-head"><div class="section-num">17</div><h2>Contacto</h2></div>
+      <p>Para cualquier consulta sobre estos Términos:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:facundocampo100@gmail.com">facundocampo100@gmail.com</a></li>
+        <li><strong>Desarrollador:</strong> Facundo Campo</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-line"></div>
+  <div class="links">
+    <a href="privacy.html">Política de Privacidad</a> ·
+    <a href="delete.html">Eliminación de Datos</a>
+  </div>
+  <p>Prode Fútbol 2026 — Facundo Campo</p>
+  <p class="attr">Football data provided by the Football-Data.org API</p>
+</footer>
+
 </body>
 </html>
